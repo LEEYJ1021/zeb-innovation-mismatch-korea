@@ -1,0 +1,8 @@
+﻿id,0
+moran_i,-0.12670918617771698
+expected_i,-0.0625
+variance_i,0.03067381520750661
+z_score,-0.36661756368463516
+p_value,0.7139043052192481
+interpretation,공간적 무작위성 (통계적으로 유의하지 않음)
+interpretation_en,Spatial randomness (not statistically significant)

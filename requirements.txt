@@ -1,0 +1,21 @@
+# requirements.txt
+
+# Core Data Science & Math
+pandas
+numpy
+scipy
+
+# Geospatial Analysis
+geopandas
+shapely
+matplotlib-scalebar
+
+# Machine Learning & NLP
+scikit-learn
+bertopic
+
+# Geocoding
+geopy
+
+# File & System Utilities
+openpyxl
