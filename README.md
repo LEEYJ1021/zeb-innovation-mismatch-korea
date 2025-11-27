@@ -1,12 +1,75 @@
-# Diagnosing Spatiotemporal Innovation Mismatches: An Integrated GIS-Topic Modeling Framework for Zero-Energy Building R&D Alignment in South Korea
+# Diagnosing Regional R&D Imbalances in Zero-Energy Buildings: A GIS–Topic Modeling Approach for Smart Built Environment Planning in South Korea
 
-This repository contains the code and processed data for the study *"Diagnosing Spatiotemporal Innovation Mismatches: An Integrated GIS-Topic Modeling Framework for Zero-Energy Building R&D Alignment in South Korea."* The study develops a novel framework to quantitatively diagnose the mismatch between Zero-Energy Building (ZEB) technology supply and demand across 17 regions in South Korea.
+This repository contains the code, processed data, and supplementary materials necessary to reproduce the findings of the study **“Diagnosing Regional R&D Imbalances in Zero-Energy Buildings: A GIS–Topic Modeling Approach for Smart Built Environment Planning in South Korea.”**
 
-## Abstract
+The study develops a novel data-driven framework to quantitatively diagnose the *spatiotemporal mismatch* between Zero-Energy Building (ZEB) technology supply and demand across 17 regions in South Korea, providing actionable intelligence for smart built environment planning.
 
-The transition to Zero-Energy Buildings (ZEB) is often hindered by a misalignment between regional market demand and research and development (R&D) supply. To diagnose this inefficiency, we developed an integrated framework combining Geographic Information Systems (GIS) and dynamic topic modeling. First, we constructed a ZEB Opportunity Index to quantify demand across 17 South Korean regions using geospatial data and an enhanced TOPSIS model. Second, we developed a Technology Supply Index by applying BERTopic to 1,528 academic papers and weighting their regional strength with a Gradient Boosting Regressor model. By subtracting the normalized supply from the demand index, we calculated a Mismatch Index. The results reveal critical imbalances: Seoul, the region with the highest demand, shows a substantial R&D gap, while Daejeon demonstrates extreme R&D saturation. This framework provides a scalable diagnostic tool for formulating targeted R&D strategies.
+---
 
-## Repository Structure
+## 📄 Abstract
+
+The adoption of Zero-Energy Buildings (ZEB) is often constrained by critical misalignments between regional market demand and research and development (R&D) supply. This study proposes a comprehensive data-driven framework that integrates Geographic Information Systems (GIS) and dynamic topic modeling to diagnose such spatiotemporal imbalances, focusing on smart technologies in the built environment.
+
+A **ZEB Opportunity Index** is constructed using robust geospatial indicators across South Korean regions, applying a Mahalanobis distance–based TOPSIS methodology to quantify demand patterns. In parallel, a **Technology Supply Index** is derived from a corpus of 1,528 academic papers using BERTopic-based dynamic topic modeling. A machine learning pipeline using Gradient Boosting Regressor calculates a **Comprehensive Impact Score (CIS)** for weighting regional technology supply.
+
+A **Mismatch Index**—computed from nationally normalized demand and supply indices—reveals critical spatial R&D gaps and oversupply zones. Results highlight substantial disparities: Seoul shows severe technological gaps despite high demand, Daejeon displays extreme R&D saturation, and provincial regions such as Gangwon and Chungcheongbuk-do remain strategic blind spots. The framework offers actionable intelligence for policymakers and urban planners to optimize innovation ecosystems and accelerate transitions toward resilient, high-performance urban environments.
+
+---
+
+## 🔑 Keywords
+
+* Zero-Energy Buildings (ZEB)
+* Smart Built Environment
+* Spatiotemporal Innovation Mismatch
+* GIS
+* Dynamic Topic Modeling
+* BERTopic
+* Multi-Criteria Decision-Making (MCDM)
+* R&D Portfolio Optimization
+* Urban Technology Planning
+
+---
+
+## 🧭 Framework Overview
+
+The analytical framework integrates geospatial analysis, text mining, and decision science:
+
+### **1. ZEB Opportunity Index (Demand-Side Analysis)**
+
+* Quantifies potential ZEB demand across 17 regions.
+* **Method**: Multi-layer geospatial synthesis (development zones, renewals, environmental constraints).
+* **Model**: Entropy-Weighted TOPSIS with Regularized Mahalanobis Distance.
+
+### **2. Technology Supply Index (Supply-Side Analysis)**
+
+* Measures regional ZEB R&D capacity based on 1,528 academic papers.
+* **Method**: BERTopic dynamic topic modeling to extract technology clusters.
+* **Machine Learning**: Gradient Boosting Regressor computes Comprehensive Impact Score (CIS).
+
+### **3. Spatiotemporal Mismatch Analysis**
+
+* Integrates normalized demand–supply indices.
+* Identifies **Strategic Gap**, **R&D Saturation**, **Balanced** regions.
+
+---
+
+## 📊 Key Findings
+
+### **✔ The “Seoul Paradox”**
+
+Despite the highest demand, Seoul shows *major cross-cluster R&D deficits* — indicating nonspecialized or misaligned research activities.
+
+### **✔ R&D Saturation Zones**
+
+Daejeon exhibits *high oversupply* in clusters like “Advanced Energy Systems,” indicating an innovation bottleneck with poor spatial diffusion.
+
+### **✔ Strategic Gap Regions**
+
+Regions such asGangwon and Chungcheongbuk-do show *severe demand–supply deficits*, signaling priority zones for policy intervention.
+
+---
+
+## 📁 Repository Structure
 
 ```bash
 # Project Root
@@ -54,12 +117,11 @@ zeb-innovation-mismatch-korea/
         ├── zeb_opportunity_index.csv
         └── ...
 ```
-
 **Note on Data:** The raw data and generated geospatial files (`.gpkg`) are not included in this repository due to their large size. Users must download the raw data and run the preprocessing script to generate the necessary files locally. See the installation guide below.
 
-## System Requirements & Installation
+---
 
-This project was developed using Python 3.9+.
+## 🖥 This project was developed using Python 3.9+.
 
 1. **Clone the repository:**
    ```bash
@@ -91,7 +153,7 @@ This project was developed using Python 3.9+.
      * Create `data/raw/address_list_to_geocode.xlsx`.
      * Create `data/raw/academic_papers_list.xlsx`.
 
-## Usage: Step-by-Step Execution Guide
+## ▶ Usage: Step-by-Step Execution Guide
 
 Run the scripts in the `src/` directory in the following order.
 
@@ -135,13 +197,35 @@ python src/06_mismatch_analysis.py
 * **Input:** Reports from `output/reports/`.
 * **Output:** Final mismatch maps and reports in `output/` folders.
 
-## Citation
+---
+
+## 📥 Required Raw Data
+
+Users *must download* raw data into `data/raw/`:
+
+### **Geospatial Data (V-World / NSDI Portal)**
+
+* Urban & Residential Environment Renewal Zones → `supply/`
+* Development Promotion Districts → `demand/`
+* Environmental Conservation Areas / Air Quality Zones → `environment/`
+* Administrative Boundaries (Sido/Si-Gun-Gu)
+
+### **User-provided Excel Files**
+
+* `address_list_to_geocode.xlsx`
+* `academic_papers_list.xlsx`
+
+---
+
+## 📚 Citation
 
 If you use the code or data from this repository in your research, please cite the original study.
 
 > https://scholar.google.com/citations?hl=ko&user=LTZSBDQAAAAJ
 
-## Author & Contact
+---
+
+## 👤 Author & Contact
 
 * **Dr. Yong-Jae Lee (이용재, 李龍在)**
 * Ph.D. in Industrial and Management Engineering (Korea Univ.)
@@ -149,3 +233,12 @@ If you use the code or data from this repository in your research, please cite t
 * E-mail: yj11021@korea.ac.kr (Korea Univ.) | yj11021@tobesoft.com (Tobesoft)
 * Google Scholar: Yong-Jae Lee
 * ORCID: 0000-0002-7664-8001
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**.
+See the `LICENSE` file for details.
+
+---
