@@ -1,4 +1,4 @@
-# Diagnosing Regional R&D–Market Mismatches in Zero-Energy Buildings: A GIS and Topic Modeling Framework for Cleaner Built Environment Transitions in South Korea
+# Diagnosing Regional R&D–Market Mismatches in Zero-Energy Buildings
 
 This repository contains the code, processed data, and supplementary materials necessary to reproduce the findings of the study **“Diagnosing Regional R&D–Market Mismatches in Zero-Energy Buildings: A GIS and Topic Modeling Framework for Cleaner Built Environment Transitions in South Korea.”**
 
