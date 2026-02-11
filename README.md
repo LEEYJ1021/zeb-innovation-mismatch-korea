@@ -1,6 +1,6 @@
-# Diagnosing Regional R&D Imbalances in Zero-Energy Buildings: A GIS–Topic Modeling Approach for Smart Built Environment Planning in South Korea
+# Diagnosing Regional R&D–Market Mismatches in Zero-Energy Buildings: A GIS and Topic Modeling Framework for Cleaner Built Environment Transitions in South Korea
 
-This repository contains the code, processed data, and supplementary materials necessary to reproduce the findings of the study **“Diagnosing Regional R&D Imbalances in Zero-Energy Buildings: A GIS–Topic Modeling Approach for Smart Built Environment Planning in South Korea.”**
+This repository contains the code, processed data, and supplementary materials necessary to reproduce the findings of the study **“Diagnosing Regional R&D–Market Mismatches in Zero-Energy Buildings: A GIS and Topic Modeling Framework for Cleaner Built Environment Transitions in South Korea.”**
 
 The study develops a novel data-driven framework to quantitatively diagnose the *spatiotemporal mismatch* between Zero-Energy Building (ZEB) technology supply and demand across 17 regions in South Korea, providing actionable intelligence for smart built environment planning.
 
